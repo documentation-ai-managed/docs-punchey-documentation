@@ -2,89 +2,71 @@
 title: Reviews Management
 description: Build and maintain your online reputation with Punchey's review tools
 ---
+## Online reputation management
 
-## Online Reputation Management
+Customer reviews help you build credibility, attract new clients, and highlight the quality of your products and services. Punchey's review tools centralize feedback across supported review channels so you can monitor, respond to, and leverage customer insights.
 
-Managing online reviews is crucial for small businesses. Punchey's review management tools help you monitor, respond to, and leverage customer feedback to improve your reputation and attract new customers.
+<Callout kind="info" collapsed="false">
+  For step-by-step instructions on requesting reviews and managing them in the Punchey dashboard, visit the reviews section of the Punchey Resource Center.
+</Callout>
 
 <Steps>
-  <Step title="Connect Platforms" icon="link">
-    Link your Google My Business, Yelp, and other review platforms to centralize feedback.
+  <Step title="Connect review channels" icon="link" title-type="p">
+    Link your supported review sources to consolidate feedback in one place.
   </Step>
-  <Step title="Monitor Reviews" icon="eye">
-    Set up automated alerts for new reviews and track sentiment across platforms.
+
+  <Step title="Monitor incoming reviews" icon="eye" title-type="p">
+    Receive alerts for new reviews and track overall sentiment across channels.
   </Step>
-  <Step title="Respond Strategically" icon="message-square">
-    Use our response templates and AI suggestions to craft professional replies.
+
+  <Step title="Respond effectively" icon="message-square" title-type="p">
+    Use review response tools to craft professional and timely replies.
   </Step>
 </Steps>
 
 <Tabs>
-  <Tab title="Google Reviews" icon="globe">
-    Manage Google My Business listings and respond to reviews that appear in local search results.
+  <Tab title="Channel overview" icon="globe">
+    Supported review channels provide a unified feed where you can view, filter, and respond to customer feedback from directly within Punchey.
   </Tab>
-  <Tab title="Yelp Management" icon="star">
-    Track and respond to Yelp reviews to improve your local search ranking.
+
+  <Tab title="Requests & outreach" icon="star">
+    Send review requests through Punchey to encourage satisfied customers to share their experience publicly.
   </Tab>
-  <Tab title="Social Media" icon="share-2">
-    Monitor reviews and feedback across Facebook, Instagram, and other social platforms.
+
+  <Tab title="Website & display tools" icon="layout">
+    Use on-site widgets to highlight positive reviews and showcase social proof.
   </Tab>
 </Tabs>
 
-<Callout kind="tip">Responding to reviews within 24 hours can improve your response rate and customer satisfaction scores.</Callout>
+<Callout kind="tip" collapsed="false">
+  Responding to reviews within 24 hours can improve engagement and demonstrate your commitment to customer satisfaction.
+</Callout>
 
-<Expandable title="Review Analytics" default-open="false">
-  <Expandable title="Sentiment Analysis" default-open="false">
-    Use AI-powered sentiment analysis to categorize reviews as positive, negative, or neutral.
+<Expandable title="Review analytics" default-open="false">
+  <Expandable title="Sentiment overview" default-open="false">
+    View high-level sentiment trends that help you understand how customers perceive your business over time.
   </Expandable>
-  <Expandable title="Trend Tracking" default-open="false">
-    Monitor review trends over time to identify areas for improvement.
+
+  <Expandable title="Historical trends" default-open="false">
+    Track changes in review volume, average rating, and recurring themes across supported channels.
   </Expandable>
 </Expandable>
 
-<Columns cols={2}>
-  <Card title="Response Templates" icon="file-text" href="#templates">
-    Access professionally written response templates for common review scenarios.
+<Columns cols="2">
+  <Card title="Response templates" href="#templates" icon="file-text" horizontal="false">
+    Access prewritten response templates for common review situations.
   </Card>
-  <Card title="Review Widgets" icon="layout" href="#widgets">
-    Embed review widgets on your website to showcase positive feedback.
+
+  <Card title="Review display widgets" href="#widgets" icon="layout" horizontal="false">
+    Embed widgets on your site to highlight your strongest reviews.
   </Card>
 </Columns>
 
-<CodeGroup tabs="REST API,Webhook">
-  <Tab title="REST API" icon="code">
-    ````javascript
-    // Fetch recent reviews
-    const reviews = await fetch('/api/reviews?platform=google&limit=10', {
-      headers: { 'Authorization': `Bearer ${apiKey}` }
-    }).then(r => r.json());
-    
-    // Respond to a review
-    await fetch(`/api/reviews/${reviewId}/response`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${apiKey}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ response: 'Thank you for your feedback!' })
-    });
-    ````
-  </Tab>
-  <Tab title="Webhook" icon="webhook">
-    ````json
-    {
-      "event": "review.created",
-      "data": {
-        "id": "rev_123",
-        "platform": "google",
-        "rating": 5,
-        "text": "Great service!",
-        "customer": "John Doe",
-        "created_at": "2024-01-15T10:30:00Z"
-      }
-    }
-    ````
-  </Tab>
-</CodeGroup>
+## Using review insights to improve your business
 
-<Callout kind="info">Punchey integrates review data with CRM tools to provide a complete customer experience view.</Callout>
+Review feedback offers a clear view of what customers appreciate and where you can improve. By monitoring recurring themes and sentiment trends, you can identify training opportunities, refine service offerings, and highlight standout team performance. Use your strongest reviews in marketing materials or on-site displays to build trust with potential customers.
+
+<Callout kind="success" collapsed="false">
+  Many businesses see improved retention when they consistently act on customer feedback and showcase positive experiences.
+</Callout>
+
