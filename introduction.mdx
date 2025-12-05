@@ -1,0 +1,87 @@
+---
+title: Introduction
+description: Overview of Punchey and its core capabilities
+---
+
+## Getting Started
+
+Punchey empowers small businesses with affordable payment processing and customer relationship management tools. Our platform helps you leverage transaction data to manage online reviews and build lasting customer relationships. By streamlining payments and reputation management, Punchey enables businesses to focus on growth and customer satisfaction.
+
+<Columns cols={3}>
+  <Card title="Payments" icon="credit-card" href="payment-solutions">
+    Streamline payment processing with secure, cost-effective solutions tailored for small businesses.
+  </Card>
+  <Card title="CRM Tools" icon="users" href="crm-tools">
+    Manage customer relationships and leverage transaction data for targeted opportunities.
+  </Card>
+  <Card title="Reviews" icon="star" href="reviews-management">
+    Enhance your online reputation through comprehensive review management features.
+  </Card>
+</Columns>
+
+<Tabs>
+  <Tab title="Quick Setup" icon="zap">
+    Get started in minutes with our simple onboarding process. Connect your payment methods and import customer data seamlessly.
+  </Tab>
+  <Tab title="Key Benefits" icon="check-circle">
+    Reduce costs, improve customer retention, and boost your online presence with integrated CRM and payment tools.
+  </Tab>
+</Tabs>
+
+<Steps>
+  <Step title="Sign Up" icon="user">
+    Create your Punchey account and verify your business details.
+  </Step>
+  <Step title="Connect Payments" icon="credit-card">
+    Integrate your preferred payment processors for seamless transactions.
+  </Step>
+  <Step title="Import Data" icon="database">
+    Upload customer information and transaction history to get insights immediately.
+  </Step>
+</Steps>
+
+<Callout kind="info">Punchey offers competitive pricing with no hidden fees, making advanced CRM and payment tools accessible to businesses of all sizes.</Callout>
+
+<Expandable title="Common Questions" default-open="false">
+  <Expandable title="Is Punchey suitable for my small business?" default-open="false">
+    Yes, Punchey is designed specifically for small businesses needing affordable payment and CRM solutions.
+  </Expandable>
+  <Expandable title="How quickly can I set up?" default-open="false">
+    Most businesses complete setup within 30 minutes using our guided onboarding.
+  </Expandable>
+</Expandable>
+
+<CodeGroup tabs="JavaScript,Python">
+  <Tab title="JavaScript" icon="code">
+    ````javascript
+    // Initialize Punchey SDK
+    const punchey = new PuncheySDK({
+      apiKey: 'your-api-key',
+      environment: 'production'
+    });
+    
+    // Process a payment
+    const payment = await punchey.payments.create({
+      amount: 1000,
+      currency: 'USD',
+      customerId: 'cust_123'
+    });
+    ````
+  </Tab>
+  <Tab title="Python" icon="code">
+    ````python
+    # Initialize Punchey SDK
+    punchey = PuncheySDK(
+        api_key='your-api-key',
+        environment='production'
+    )
+    
+    # Process a payment
+    payment = punchey.payments.create(
+        amount=1000,
+        currency='USD',
+        customer_id='cust_123'
+    )
+    ````
+  </Tab>
+</CodeGroup>

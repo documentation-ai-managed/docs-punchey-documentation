@@ -1,0 +1,88 @@
+---
+title: Payment Solutions
+description: Learn how to implement and manage payment processing with Punchey
+---
+
+## Payment Processing Overview
+
+Punchey provides comprehensive payment solutions designed for small businesses. Our platform supports multiple payment methods, ensures secure transactions, and offers detailed analytics to help you optimize your revenue streams.
+
+<Steps>
+  <Step title="Choose Payment Method" icon="credit-card">
+    Select from credit cards, ACH transfers, digital wallets, and more based on your business needs.
+  </Step>
+  <Step title="Configure Settings" icon="settings">
+    Set up transaction limits, fees, and notification preferences in your dashboard.
+  </Step>
+  <Step title="Test Transactions" icon="check-circle">
+    Use our sandbox environment to test payment flows before going live.
+  </Step>
+</Steps>
+
+<Tabs>
+  <Tab title="Credit Cards" icon="credit-card">
+    Accept Visa, Mastercard, American Express, and Discover with competitive processing rates as low as 2.9% + $0.30 per transaction.
+  </Tab>
+  <Tab title="ACH Transfers" icon="banknote">
+    Process direct bank transfers for recurring payments or larger transactions with fees starting at $0.25 each.
+  </Tab>
+  <Tab title="Digital Wallets" icon="smartphone">
+    Integrate Apple Pay, Google Pay, and PayPal for mobile-friendly checkout experiences.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">Enable recurring billing to automate subscription payments and reduce manual processing overhead.</Callout>
+
+<Expandable title="Integration Options" default-open="false">
+  <Expandable title="API Integration" default-open="false">
+    Use our RESTful API to integrate payments directly into your existing systems.
+  </Expandable>
+  <Expandable title="Plugin Solutions" default-open="false">
+    Install pre-built plugins for popular e-commerce platforms like Shopify and WooCommerce.
+  </Expandable>
+</Expandable>
+
+<Columns cols={2}>
+  <Card title="Security Features" icon="shield" href="#security">
+    PCI DSS compliant with advanced fraud detection and encryption standards.
+  </Card>
+  <Card title="Analytics Dashboard" icon="bar-chart" href="#analytics">
+    Track transaction volumes, success rates, and revenue trends in real-time.
+  </Card>
+</Columns>
+
+<CodeGroup tabs="cURL,JavaScript">
+  <Tab title="cURL" icon="terminal">
+    ````bash
+    curl -X POST https://api.punchey.com/v1/payments \
+      -H "Authorization: Bearer YOUR_API_KEY" \
+      -H "Content-Type: application/json" \
+      -d '{
+        "amount": 5000,
+        "currency": "USD",
+        "payment_method": "card",
+        "customer_id": "cust_123"
+      }'
+    ````
+  </Tab>
+  <Tab title="JavaScript" icon="code">
+    ````javascript
+    const response = await fetch('/api/payments', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        amount: 5000,
+        currency: 'USD',
+        paymentMethod: 'card',
+        customerId: 'cust_123'
+      })
+    });
+    const payment = await response.json();
+    ````
+  </Tab>
+</CodeGroup>
+
+<Callout kind="info">All transactions are protected by our comprehensive security measures, including tokenization and SSL encryption.</Callout>
