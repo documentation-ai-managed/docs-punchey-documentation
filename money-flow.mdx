@@ -1,16 +1,15 @@
 ---
-title: "How Money Moves with Punchey"
-description: "A conceptual guide to how payments, payouts, fees, refunds, and disputes flow through your Punchey account."
+title: How Money Moves with Punchey
+description: >-
+  A conceptual guide to how payments, payouts, fees, refunds, and disputes flow
+  through your Punchey account.
 ---
-
 ## Understanding the flow of money
 
-This guide explains, in plain language, what happens after you take a payment, how payouts reach your bank, and how fees, tips, taxes, refunds, and disputes affect what you receive. For step-by-step, screen-by-screen instructions, visit the Punchey Resource Center at support.punchey.com.
+This guide explains, in plain language, what happens after you take a payment, how payouts reach your bank, and how fees, tips, taxes, refunds, and disputes affect what you receive. For step-by-step, screen-by-screen instructions, visit the Punchey Help Center at [https://puncheyteam.freshdesk.com/en/support/solutions](https://puncheyteam.freshdesk.com/en/support/solutions).
 
-<Callout kind="info">
-
-Timing and labels may vary by merchant account and bank. If something appears delayed or unexpected, visit the Resource Center or contact Support.
-
+<Callout kind="info" collapsed="false">
+  Timing and labels may vary by merchant account and bank. If something appears delayed or unexpected, visit the Punchey Help Center at [https://puncheyteam.freshdesk.com/en/support/solutions](https://puncheyteam.freshdesk.com/en/support/solutions) or contact Support.
 </Callout>
 
 ## Taking payments
@@ -18,55 +17,96 @@ Timing and labels may vary by merchant account and bank. If something appears de
 When you accept a payment, Punchey records the transaction and moves it through several predictable stages. These stages help you understand where the money is and whether it is heading toward a payout.
 
 <Steps>
-  <Step title="Authorization" icon="check-circle">
-
+  <Step title="Authorization" icon="check-circle" title-type="p">
     The customer’s bank confirms funds are available. The transaction appears in your activity soon after payment is taken.
-
   </Step>
 
-  <Step title="Capture and settlement" icon="settings">
-
+  <Step title="Capture and settlement" icon="settings" title-type="p">
     The payment is finalized and prepared for settlement. This usually happens automatically without any action required from you.
-
   </Step>
 
-  <Step title="Included in a batch" icon="package">
-
+  <Step title="Included in a batch" icon="package" title-type="p">
     Transactions are grouped before being sent to your bank. Tips, taxes, and any applicable fees can make the batch amount different from the original sale amount.
-
   </Step>
 </Steps>
 
 ### Status expectations
 
-- **Pending or authorized**: Payment is initiated and funds are being confirmed.  
-- **Completed or settled**: Funds have been captured and will be included in a future payout.  
-- **Voided**: The payment was reversed before settlement, so no funds move to or from your bank.  
+- **Pending or authorized**: Payment is initiated and funds are being confirmed.
+
+- **Completed or settled**: Funds have been captured and will be included in a future payout.
+
+- **Voided**: The payment was reversed before settlement, so no funds move to or from your bank.
+
 - **Refunded**: Funds have been returned to the customer after settlement.
 
 ## Payouts and deposits
 
 Once transactions are settled, they are grouped into payouts that are sent to your bank account.
 
-<Columns cols={2}>
-  <Card title="Payout timing" icon="clock" href="reports">
-
+<Columns cols="2">
+  <Card title="Payout timing" href="reports" icon="clock" horizontal="false">
     Most merchants see deposits within a few business days. Weekends and bank holidays may extend timing.
-
   </Card>
 
-  <Card title="Reviewing payouts" icon="bar-chart" href="reports">
-
+  <Card title="Reviewing payouts" href="reports" icon="bar-chart" horizontal="false">
     Use the Reports page to view payout totals, adjustments, fees, and which transactions were included.
-
   </Card>
 </Columns>
 
 ### What you can expect
 
-- Payouts reflect the net amount after fees, refunds, and adjustments.  
-- Multiple payouts may occur depending on your transaction volume.  
+- Payouts reflect the net amount after fees, refunds, and adjustments.
+
+- Multiple payouts may occur depending on your transaction volume.
+
 - Large tips or adjustments can cause the payout amount to differ from your collected totals.
+
+## Registers, cash management, and end‑of‑day flow
+
+If you take in-person payments, your **registers** and **cash drawers** sit between individual transactions and your final bank deposits.
+
+Conceptually:
+
+- A **register session** tracks activity for a specific drawer or station over part of a day.
+
+- **Opening a register** records your starting cash and prepares the drawer for checkouts.
+
+- **Closing a register** compares expected totals to what is actually in the drawer and highlights differences.
+
+- **Cash management controls** such as drops or paid-outs help you document movements in or out of the drawer during the day.
+
+These steps do not change how card payments move through the processor, but they are essential for:
+
+- Matching cash and card totals to your reports.
+
+- Catching mistakes or unbalanced drawers quickly.
+
+- Keeping a clean record of who handled a particular register session.
+
+<Callout kind="tip" collapsed="false">
+  Think of reports and money flow as the **ledger view** of your business, and register sessions as the **on-the-ground record** of how cash and in-person payments moved throughout the day.
+</Callout>
+
+### Deposit schedules and statements
+
+Payouts rarely match a single day's sales exactly. Timing, refunds, adjustments, and processing fees all affect what reaches your bank.
+
+At a high level:
+
+- **Deposit schedules** describe how often payouts are grouped and sent such as daily with a delay of a few business days.
+
+- **Processing statements and fee reports** summarize the fees associated with those payouts.
+
+- **Deposit and fee reports** help you see which sales and adjustments ended up in each bank deposit.
+
+For detailed payout timing, examples, and statement views, see:
+
+- The **Reports** section in the Punchey Help Center:\
+  [https://puncheyteam.freshdesk.com/en/support/solutions/158000419332](https://puncheyteam.freshdesk.com/en/support/solutions/158000419332)
+
+- The **Take Payments & Get Paid** articles on deposits and processing statements:\
+  [https://puncheyteam.freshdesk.com/en/support/solutions/158000419315](https://puncheyteam.freshdesk.com/en/support/solutions/158000419315)
 
 ## Refunds, voids, and adjustments
 
@@ -74,21 +114,15 @@ Refunds and voids change how and when money moves through your account.
 
 <Tabs>
   <Tab title="Voids" icon="x-circle">
-
     Voids happen before settlement. No funds have moved yet, so the original payment will not appear in a payout or return to the customer’s bank.
-
   </Tab>
 
   <Tab title="Refunds" icon="rotate-ccw">
-
     Refunds happen after settlement. The refunded amount reduces an upcoming payout or may result in a debit depending on timing. Customer bank processing times vary.
-
   </Tab>
 
   <Tab title="Adjustments" icon="settings">
-
     Adjustments correct details such as tips, taxes, or fees. They appear in your reports and affect the net payout amount.
-
   </Tab>
 </Tabs>
 
@@ -96,55 +130,47 @@ Refunds and voids change how and when money moves through your account.
 
 A dispute occurs when a cardholder contacts their bank to challenge a transaction.
 
-<Callout kind="alert">
-
-While a dispute is active, the disputed amount is temporarily withdrawn. You may need to provide documentation. Resolution timelines vary by bank and can take several weeks.
-
+<Callout kind="alert" collapsed="false">
+  While a dispute is active, the disputed amount is temporarily withdrawn. You may need to provide documentation. Resolution timelines vary by bank and can take several weeks.
 </Callout>
 
 ### What to know
 
-- Funds may be placed on hold or reversed until the dispute is resolved.  
-- Winning a dispute may return the funds in a later payout.  
-- Losing a dispute makes the reversal permanent.  
-- Timely documentation matters; see the Resource Center for how to respond.
+- Funds may be placed on hold or reversed until the dispute is resolved.
+
+- Winning a dispute may return the funds in a later payout.
+
+- Losing a dispute makes the reversal permanent.
+
+- Timely documentation matters; see the Help Center for how to respond.
 
 ## Fees, taxes, and tips in your records
 
 Different parts of each transaction appear in different places depending on type.
 
 <Expandable title="Fees" default-open="true">
-
-Payment processing fees are deducted within each payout. You can review them in payout detail reports and transaction summaries.
-
+  Payment processing fees are deducted within each payout. You can review them in payout detail reports and transaction summaries.
 </Expandable>
 
-<Expandable title="Taxes">
-
-Collected taxes appear in your receipts and sales reports. They are part of the transaction total but do not increase your net payout because you remit them separately.
-
+<Expandable title="Taxes" default-open="false">
+  Collected taxes appear in your receipts and sales reports. They are part of the transaction total but do not increase your net payout because you remit them separately.
 </Expandable>
 
-<Expandable title="Tips">
-
-Tips are included in the transaction total and flow into payout batches. Distributing tips to staff depends on your internal processes.
-
+<Expandable title="Tips" default-open="false">
+  Tips are included in the transaction total and flow into payout batches. Distributing tips to staff depends on your internal processes.
 </Expandable>
 
 ## Where to learn the exact steps
 
-Punchey’s high-level documentation focuses on concepts and expectations. Detailed, screen-by-screen instructions live in the Punchey Resource Center at support.punchey.com.
+Punchey’s high-level documentation focuses on concepts and expectations. Detailed, screen-by-screen instructions live in the Punchey Help Center at [https://puncheyteam.freshdesk.com/en/support/solutions](https://puncheyteam.freshdesk.com/en/support/solutions).
 
-<Columns cols={2}>
-  <Card title="Take payments" href="payment-solutions" icon="credit-card">
-
+<Columns cols="2">
+  <Card title="Take payments" href="payment-solutions" icon="credit-card" horizontal="false">
     Learn how payments work in Punchey and explore key concepts.
-
   </Card>
 
-  <Card title="Reports and payouts" href="reports" icon="bar-chart">
-
+  <Card title="Reports and payouts" href="reports" icon="bar-chart" horizontal="false">
     Understand how to interpret reports, payouts, and account activity.
-
   </Card>
 </Columns>
+
