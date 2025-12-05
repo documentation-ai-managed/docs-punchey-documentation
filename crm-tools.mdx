@@ -1,104 +1,64 @@
 ---
 title: CRM Tools
-description: Master customer relationship management with Punchey's integrated tools
+description: >-
+  Conceptual guide to Punchey's customer profiles, communications, and digital
+  forms
 ---
+## Customer relationship management
 
-## Customer Relationship Management
+Punchey's CRM tools help you understand customers, streamline data collection, and manage ongoing engagement. You can explore detailed customer profiles, maintain accurate records, and use digital forms to simplify onboarding and service workflows.
 
-Punchey's CRM tools help small businesses build stronger customer relationships by leveraging transaction data. Track customer interactions, manage communications, and identify opportunities for upselling and retention.
+A full overview of customer tools and forms is available in the Punchey Resource Center. For step‑by‑step instructions, visit the Customers & Forms section there.
 
-<Columns cols={3}>
-  <Card title="Customer Profiles" icon="user" href="#profiles">
-    Create detailed customer profiles with transaction history and preferences.
+<Columns cols="3">
+  <Card title="Customer profiles" href="#profiles" icon="user" horizontal="false">
+    Maintain detailed customer profiles with contact information, transaction history, and notes that help you learn more about your customers.
   </Card>
-  <Card title="Communication Tools" icon="message-square" href="#communication">
-    Send targeted emails, SMS, and notifications based on customer behavior.
+
+  <Card title="Communication tools" href="#communication" icon="message-square" horizontal="false">
+    Reach customers through targeted email or SMS messages when you need to share updates or request information.
   </Card>
-  <Card title="Analytics Insights" icon="bar-chart" href="#analytics">
-    Analyze customer lifetime value and identify trends for better decision-making.
+
+  <Card title="Digital forms" href="#forms" icon="file-text" horizontal="false">
+    Use online forms to collect customer details and streamline your data‑gathering process.
   </Card>
 </Columns>
 
 <Steps>
-  <Step title="Import Customers" icon="upload">
-    Upload customer data from spreadsheets or integrate with existing systems.
+  <Step title="Import customer data" icon="upload" title-type="p">
+    Bring in customer records from spreadsheets or other systems to create a unified profile for each customer.
   </Step>
-  <Step title="Set Up Segments" icon="users">
-    Create customer segments based on purchase history, location, or behavior.
+
+  <Step title="Create useful segments" icon="users" title-type="p">
+    Organize customers into groups based on shared attributes, visit frequency, or past transactions.
   </Step>
-  <Step title="Automate Workflows" icon="settings">
-    Configure automated email campaigns and follow-up sequences.
+
+  <Step title="Use forms to collect information" icon="settings" title-type="p">
+    Set up digital forms to gather customer details before appointments or during check‑in.
   </Step>
 </Steps>
 
 <Tabs>
-  <Tab title="Email Marketing" icon="mail">
-    Design and send professional email campaigns with built-in templates and analytics.
+  <Tab title="Customer profiles" icon="user">
+    Customer profiles centralize key information such as name, email, and interaction history, allowing teams to provide more personalized service.
   </Tab>
-  <Tab title="SMS Notifications" icon="message-circle">
-    Send timely SMS updates for order confirmations and promotional offers.
+
+  <Tab title="Communications" icon="message-circle">
+    Send timely messages and updates when you need to reach specific customers or groups.
   </Tab>
-  <Tab title="Loyalty Programs" icon="star">
-    Reward repeat customers with points-based loyalty programs.
+
+  <Tab title="Forms" icon="file-text">
+    Replace paper forms with digital versions so customers can complete required information quickly and accurately.
   </Tab>
 </Tabs>
 
-<Callout kind="tip">Use transaction data to personalize communications and increase customer engagement by up to 40%.</Callout>
+<Callout kind="tip" collapsed="false">
+  Clear, accurate customer information helps streamline communication and improves day‑to‑day service efficiency.
+</Callout>
 
-<Expandable title="Advanced Features" default-open="false">
-  <Expandable title="Custom Fields" default-open="false">
-    Add custom fields to track additional customer information like preferences or tags.
-  </Expandable>
-  <Expandable title="Integration APIs" default-open="false">
-    Connect with external tools like accounting software and marketing platforms.
+<Expandable title="Additional CRM features" default-open="false">
+  <Expandable title="Data exports" default-open="false">
+    Export customer lists or form data whenever you need to analyze or move information elsewhere.
   </Expandable>
 </Expandable>
 
-<CodeGroup tabs="Python,Node.js">
-  <Tab title="Python" icon="code">
-    ````python
-    import punchey
-    
-    # Initialize CRM client
-    crm = punchey.CRM(api_key='your-key')
-    
-    # Create customer profile
-    customer = crm.customers.create({
-        'name': 'John Doe',
-        'email': 'john@example.com',
-        'phone': '+1234567890'
-    })
-    
-    # Add transaction data
-    crm.transactions.add(customer.id, {
-        'amount': 150,
-        'date': '2024-01-15',
-        'items': ['widget-a', 'widget-b']
-    })
-    ````
-  </Tab>
-  <Tab title="Node.js" icon="code">
-    ````javascript
-    const punchey = require('punchey-sdk');
-    
-    // Initialize CRM client
-    const crm = new punchey.CRM({ apiKey: 'your-key' });
-    
-    // Create customer profile
-    const customer = await crm.customers.create({
-      name: 'John Doe',
-      email: 'john@example.com',
-      phone: '+1234567890'
-    });
-    
-    // Add transaction data
-    await crm.transactions.add(customer.id, {
-      amount: 150,
-      date: '2024-01-15',
-      items: ['widget-a', 'widget-b']
-    });
-    ````
-  </Tab>
-</CodeGroup>
-
-<Callout kind="info">Punchey's CRM tools integrate seamlessly with our payment processing for automatic customer profile updates.</Callout>
