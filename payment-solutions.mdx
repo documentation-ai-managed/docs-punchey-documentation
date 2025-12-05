@@ -2,87 +2,109 @@
 title: Payment Solutions
 description: Learn how to implement and manage payment processing with Punchey
 ---
+## Payment processing overview
 
-## Payment Processing Overview
+Punchey provides comprehensive payment capabilities designed to help you take payments and get paid efficiently. You can create invoices, accept deposits, manage services and products, and track payment activity across your business. Supported payment methods include common card and bank-based options; refer to your merchant agreement or the Punchey Resource Center for current method availability and pricing details.
 
-Punchey provides comprehensive payment solutions designed for small businesses. Our platform supports multiple payment methods, ensures secure transactions, and offers detailed analytics to help you optimize your revenue streams.
+<Callout kind="info" collapsed="false">
+  Visit the Punchey Resource Center for step-by-step UI guidance on taking payments, managing invoices, and setting up deposits.
+</Callout>
+
+## Tips and taxes at a glance
+
+Punchey allows you to add tips and apply taxes as part of your normal checkout or invoicing workflow. Tips can be configured as suggested amounts or left open for customers to enter their own values. Taxes are calculated based on the rates you set for your location and product or service categories. Detailed setup steps are available in the Resource Center.
+
+## Where this fits with money flow
+
+For a broader view of how payments, deposits, fees, tips, and taxes ultimately move through your account, see the conceptual guide titled How Money Moves with Punchey. It explains the end‑to‑end flow so you can better understand how your payouts align with daily activity.
+
+## Payment states and common edge cases
+
+Businesses may occasionally see transactions that do not complete as expected. These situations are typically straightforward once you know what to look for:
+
+- Declines often occur due to insufficient funds, incorrect card details, or bank security checks. You can view the decline reason in your payment activity list.
+
+- Partial approvals may appear when a card has limited available balance. In these cases, the card covers part of the amount, and you can collect the remaining balance using another method.
+
+- Expired or outdated cards typically fail during authorization. The customer may need to update their payment information before retrying.
+
+- Voids and refunds appear differently depending on whether settlement has occurred. Your payment activity timeline shows whether money is still moving or has already been returned.
+
+<Callout kind="info" collapsed="false">
+  When something looks unusual, review the payment details screen for status, event history, and any bank‑supplied explanations.
+</Callout>
+
+## Deposits versus full payments
+
+Deposits help businesses secure commitment before work begins or materials are prepared. A deposit records partial payment up front and reduces the remaining balance owed on the final invoice.
+
+- The deposit and the final payment appear as related but separate entries in your records.
+
+- When the final payment is collected, the customer sees the remaining balance only, not the amount already deposited.
+
+- Your payout activity reflects each payment as it settles, which may occur on different days.
+
+<Callout kind="tip" collapsed="false">
+  Deposits can be especially useful for appointments, custom orders, and services that require advance preparation.
+</Callout>
+
+## Handling split payments
+
+Split payments allow a customer to pay using more than one method at checkout, such as part card and part cash.
+
+- Each portion of the split is recorded as its own line in the payment activity list.
+
+- The invoice or ticket shows the combined total as fully paid, while your records clearly identify which methods were used.
+
+- This can simplify end‑of‑day reconciliation by showing how much of a sale was collected by each payment method.
+
+<Callout kind="info" collapsed="false">
+  If a customer wants to divide a bill among multiple people or methods, you can apply each amount one at a time until the balance reaches zero.
+</Callout>
 
 <Steps>
-  <Step title="Choose Payment Method" icon="credit-card">
-    Select from credit cards, ACH transfers, digital wallets, and more based on your business needs.
+  <Step title="Choose supported payment methods" icon="credit-card" title-type="p">
+    Select from the payment methods available to your merchant account. Configure how these methods appear when customers pay invoices or deposits.
   </Step>
-  <Step title="Configure Settings" icon="settings">
-    Set up transaction limits, fees, and notification preferences in your dashboard.
+
+  <Step title="Configure payment settings" icon="settings" title-type="p">
+    Set up preferences such as notification rules, transaction limits, and invoice behavior.
   </Step>
-  <Step title="Test Transactions" icon="check-circle">
-    Use our sandbox environment to test payment flows before going live.
+
+  <Step title="Test your workflow" icon="check-circle" title-type="p">
+    Use test data or a controlled environment to confirm your payment flow before using it in daily operations.
   </Step>
 </Steps>
 
 <Tabs>
-  <Tab title="Credit Cards" icon="credit-card">
-    Accept Visa, Mastercard, American Express, and Discover with competitive processing rates as low as 2.9% + $0.30 per transaction.
+  <Tab title="Cards" icon="credit-card">
+    Accept supported card-based payments for invoices, deposits, and point-of-sale activity. Check your merchant documentation for current supported brands and applicable terms.
   </Tab>
-  <Tab title="ACH Transfers" icon="banknote">
-    Process direct bank transfers for recurring payments or larger transactions with fees starting at $0.25 each.
+
+  <Tab title="Bank-based methods" icon="banknote">
+    Allow customers to pay using eligible bank transfer options, useful for recurring billing or larger invoices. Method availability varies by merchant configuration.
   </Tab>
-  <Tab title="Digital Wallets" icon="smartphone">
-    Integrate Apple Pay, Google Pay, and PayPal for mobile-friendly checkout experiences.
+
+  <Tab title="Other supported methods" icon="smartphone">
+    Depending on your account, you may enable additional payment options. Review your merchant agreement or contact support for the most accurate list.
   </Tab>
 </Tabs>
 
-<Callout kind="tip">Enable recurring billing to automate subscription payments and reduce manual processing overhead.</Callout>
+<Callout kind="tip" collapsed="false">
+  Recurring billing can help automate subscription or installment payments for services you provide.
+</Callout>
 
-<Expandable title="Integration Options" default-open="false">
-  <Expandable title="API Integration" default-open="false">
-    Use our RESTful API to integrate payments directly into your existing systems.
-  </Expandable>
-  <Expandable title="Plugin Solutions" default-open="false">
-    Install pre-built plugins for popular e-commerce platforms like Shopify and WooCommerce.
-  </Expandable>
-</Expandable>
-
-<Columns cols={2}>
-  <Card title="Security Features" icon="shield" href="#security">
-    PCI DSS compliant with advanced fraud detection and encryption standards.
+<Columns cols="2">
+  <Card title="Security features" href="#security" icon="shield" horizontal="false">
+    Punchey includes strong security controls such as encryption and fraud monitoring to help safeguard sensitive payment information during processing.
   </Card>
-  <Card title="Analytics Dashboard" icon="bar-chart" href="#analytics">
-    Track transaction volumes, success rates, and revenue trends in real-time.
+
+  <Card title="Analytics dashboard" href="#analytics" icon="bar-chart" horizontal="false">
+    Review payment activity, monitor trends, and analyze customer behavior in real time.
   </Card>
 </Columns>
 
-<CodeGroup tabs="cURL,JavaScript">
-  <Tab title="cURL" icon="terminal">
-    ````bash
-    curl -X POST https://api.punchey.com/v1/payments \
-      -H "Authorization: Bearer YOUR_API_KEY" \
-      -H "Content-Type: application/json" \
-      -d '{
-        "amount": 5000,
-        "currency": "USD",
-        "payment_method": "card",
-        "customer_id": "cust_123"
-      }'
-    ````
-  </Tab>
-  <Tab title="JavaScript" icon="code">
-    ````javascript
-    const response = await fetch('/api/payments', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${apiKey}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        amount: 5000,
-        currency: 'USD',
-        paymentMethod: 'card',
-        customerId: 'cust_123'
-      })
-    });
-    const payment = await response.json();
-    ````
-  </Tab>
-</CodeGroup>
+<Callout kind="info" collapsed="false">
+  Punchey uses industry-standard safeguards to help ensure secure handling of your customers' payment information.
+</Callout>
 
-<Callout kind="info">All transactions are protected by our comprehensive security measures, including tokenization and SSL encryption.</Callout>
