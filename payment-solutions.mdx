@@ -2,36 +2,67 @@
 title: Payment Solutions
 description: Learn how to implement and manage payment processing with Punchey
 ---
+
 ## Payment processing overview
 
 Punchey provides comprehensive payment capabilities designed to help you take payments and get paid efficiently. You can create invoices, accept deposits, manage services and products, and track payment activity across your business. Supported payment methods include common card and bank-based options; refer to your merchant agreement or the Punchey Help Center for current method availability and pricing details.
 
-<Callout kind="info" collapsed="false">
-  Visit the Punchey Help Center for step-by-step UI guidance on taking payments, managing invoices, and setting up deposits.
+<Callout kind="info">
+  
+Visit the Punchey Help Center for step-by-step UI guidance on taking payments, managing invoices, and setting up deposits.
+
 </Callout>
+
+## Creating and managing invoices
+
+Invoices are the foundation of most payment activity in Punchey. They define what a customer owes, how prices are calculated, and which payment methods are available. At a high level, an invoice typically includes:
+
+- Customer details to ensure the bill is associated with the correct profile.
+- Selected services and products, along with quantities and pricing.
+- Taxes, tips, discounts, or special pricing rules.
+- Payment terms, including whether deposits or full payments are due immediately.
+
+Invoices work well for scheduled services, multi-item sales, and any situation where you need a clear record of the transaction before money is collected.
+
+For screen-by-screen creation steps, see the Freshdesk article **"How to Create an Invoice in Punchey"** in the Invoices and Payments folder.
+
+### Converting appointments to bills
+
+When you use Punchey Appointments, you can move seamlessly from scheduling to payment. After an appointment is completed, you may convert it into a bill, which automatically pulls in the related services and customer information. This helps keep your operational workflow consistent from booking through checkout.
+
+For details, see the Freshdesk article **"How To Convert an Appointment to a Bill"** in the Take Payments & Get Paid folder.
 
 ## Tips and taxes at a glance
 
 Punchey allows you to add tips and apply taxes as part of your normal checkout or invoicing workflow. Tips can be configured as suggested amounts or left open for customers to enter their own values. Taxes are calculated based on the rates you set for your location and product or service categories. Detailed setup steps are available in the Punchey Help Center.
 
+## Discounts, special pricing, and credit adjustments
+
+Businesses often need flexible pricing tools for special customers, promotions, or corrections. Punchey supports several adjustments that help you maintain accurate balances:
+
+- **Discounts and special pricing** can reduce the total invoice amount or adjust specific line items. These tools help reward loyal customers or apply negotiated pricing. For examples, see **"Adding Discounts for Special Customers"** in the Invoices and Payments folder.
+- **Using credit accounts** allows value to be applied toward outstanding invoices. This is useful when correcting prior transactions or honoring store credit. For guidance, see **"Using Credit Account to Adjust Invoice Balances"** in the Refunds & Balance Adjustments folder.
+- **Invoices paid with credit** behave slightly differently, because the credit value offsets what the customer owes. This helps maintain an accurate picture of remaining balances. Refer to **"What Happens When an Invoice Is Paid with Credit?"** for more detail.
+
+These tools work together to ensure invoices reflect the correct amount due before payment is collected.
+
 ## Where this fits with money flow
 
-For a broader view of how payments, deposits, fees, tips, and taxes ultimately move through your account, see the conceptual guide titled How Money Moves with Punchey. It explains the end‑to‑end flow so you can better understand how your payouts align with daily activity.
+For a broader view of how payments, deposits, fees, tips, and taxes ultimately move through your account, see the conceptual guide titled [How Money Moves with Punchey](/money-flow). It explains the end-to-end flow so you can better understand how your payouts align with daily activity.
 
 ## Payment states and common edge cases
 
 Businesses may occasionally see transactions that do not complete as expected. These situations are typically straightforward once you know what to look for:
 
 - Declines often occur due to insufficient funds, incorrect card details, or bank security checks. You can view the decline reason in your payment activity list.
-
 - Partial approvals may appear when a card has limited available balance. In these cases, the card covers part of the amount, and you can collect the remaining balance using another method.
-
 - Expired or outdated cards typically fail during authorization. The customer may need to update their payment information before retrying.
-
 - Voids and refunds appear differently depending on whether settlement has occurred. Your payment activity timeline shows whether money is still moving or has already been returned.
 
-<Callout kind="info" collapsed="false">
-  When something looks unusual, review the payment details screen for status, event history, and any bank‑supplied explanations.
+<Callout kind="info">
+  
+When something looks unusual, review the payment details screen for status, event history, and any bank-supplied explanations.
+
 </Callout>
 
 ## Deposits versus full payments
@@ -39,36 +70,33 @@ Businesses may occasionally see transactions that do not complete as expected. T
 Deposits help businesses secure commitment before work begins or materials are prepared. A deposit records partial payment up front and reduces the remaining balance owed on the final invoice.
 
 - The deposit and the final payment appear as related but separate entries in your records.
-
 - When the final payment is collected, the customer sees the remaining balance only, not the amount already deposited.
-
 - Your payout activity reflects each payment as it settles, which may occur on different days.
 
-<Callout kind="tip" collapsed="false">
-  Deposits can be especially useful for appointments, custom orders, and services that require advance preparation.
+<Callout kind="tip">
+  
+Deposits can be especially useful for appointments, custom orders, and services that require advance preparation.
+
 </Callout>
 
 ## Refunds, voids, and store credit
 
-From a customer’s perspective, a refund simply means money is returned. Behind the scenes, Punchey treats different types of changes in different ways:
+From a customer's perspective, a refund simply means money is returned. Behind the scenes, Punchey treats different types of changes in different ways:
 
 - **Voids** happen before a payment settles. The original charge is cancelled, and no funds move to or from your bank.
-
 - **Refunds** happen after a payment settles. The refunded amount reduces an upcoming payout or may result in a debit from your account depending on timing.
-
 - **Store credit (credit accounts)** lets you keep value with the customer rather than sending funds back to their card or bank. The customer can then apply that credit to future visits.
 
 In your activity and reports, you will see:
 
 - The **original payment**, showing what was charged.
-
 - Any **refunds or voids**, showing how the original amount changed.
+- Any **credit adjustments**, showing when value was moved into or out of a customer's credit balance.
 
-- Any **credit adjustments**, showing when value was moved into or out of a customer’s credit balance.
+<Callout kind="info">
+  
+For screen-by-screen steps on issuing refunds, voiding payments, or using credit accounts to adjust invoice balances, visit the Take Payments and Get Paid section of the Punchey Help Center.
 
-<Callout kind="info" collapsed="false">
-  For screen‑by‑screen steps on issuing refunds, voiding payments, or using credit accounts to adjust invoice balances, visit the **Take Payments & Get Paid** section of the Punchey Help Center:\
-  [https://puncheyteam.freshdesk.com/en/support/solutions/158000419315](https://puncheyteam.freshdesk.com/en/support/solutions/158000419315)
 </Callout>
 
 ## Handling split payments
@@ -76,58 +104,91 @@ In your activity and reports, you will see:
 Split payments allow a customer to pay using more than one method at checkout, such as part card and part cash.
 
 - Each portion of the split is recorded as its own line in the payment activity list.
-
 - The invoice or ticket shows the combined total as fully paid, while your records clearly identify which methods were used.
+- This can simplify end-of-day reconciliation by showing how much of a sale was collected by each payment method.
 
-- This can simplify end‑of‑day reconciliation by showing how much of a sale was collected by each payment method.
+<Callout kind="info">
+  
+If a customer wants to divide a bill among multiple people or methods, you can apply each amount one at a time until the balance reaches zero.
 
-<Callout kind="info" collapsed="false">
-  If a customer wants to divide a bill among multiple people or methods, you can apply each amount one at a time until the balance reaches zero.
 </Callout>
+
+## Checkout, receipts, and register operations
+
+Punchey supports flexible checkout flows so you can complete transactions from different parts of the system, such as the calendar or daily schedule. For guidance, see the Freshdesk articles in the **Checkout and Receipts** folder, including checkout from the schedule or calendar view.
+
+Email receipts can be customized to match your brand and communication preferences. You can also enable notifications when invoices are paid. See **"How to Customize your Email Receipts (and Get Notified When Invoices Are Paid)"** for details.
+
+Register management adds structure to front-desk or point-of-sale operations by using a register session to track activity for a single cash drawer or checkout station over part of a day. A register session creates a clear chain between individual transactions, cash drawer movements, and end-of-day reconciliation.
+
+- Opening a register session establishes the starting cash for that drawer.
+- During the session, you can record cash movements such as drops and paid-outs.
+- Closing the session summarizes the day's activity to support accurate reconciliation.
+
+For a deeper conceptual overview, see [Register Management Basics](/register-management-basics). For detailed, step-by-step workflows (opening, drops, paid-outs, closing), see the **Register Management (Open and Close)** folder in the Punchey Help Center.
 
 <Steps>
   <Step title="Choose supported payment methods" icon="credit-card" title-type="p">
-    Select from the payment methods available to your merchant account. Configure how these methods appear when customers pay invoices or deposits.
+    
+Select from the payment methods available to your merchant account. Configure how these methods appear when customers pay invoices or deposits.
+
   </Step>
 
   <Step title="Configure payment settings" icon="settings" title-type="p">
-    Set up preferences such as notification rules, transaction limits, and invoice behavior.
+    
+Set up preferences such as notification rules, transaction limits, and invoice behavior.
+
   </Step>
 
   <Step title="Test your workflow" icon="check-circle" title-type="p">
-    Use test data or a controlled environment to confirm your payment flow before using it in daily operations.
+    
+Use test data or a controlled environment to confirm your payment flow before using it in daily operations.
+
   </Step>
 </Steps>
 
 <Tabs>
   <Tab title="Cards" icon="credit-card">
-    Accept supported card-based payments for invoices, deposits, and point-of-sale activity. Check your merchant documentation for current supported brands and applicable terms.
+    
+Accept supported card-based payments for invoices, deposits, and point-of-sale activity. Check your merchant documentation for current supported brands and applicable terms.
+
   </Tab>
 
   <Tab title="Bank-based methods" icon="banknote">
-    Allow customers to pay using eligible bank transfer options, useful for recurring billing or larger invoices. Method availability varies by merchant configuration.
+    
+Allow customers to pay using eligible bank transfer options, useful for recurring billing or larger invoices. Method availability varies by merchant configuration.
+
   </Tab>
 
   <Tab title="Other supported methods" icon="smartphone">
-    Depending on your account, you may enable additional payment options. Review your merchant agreement or contact support for the most accurate list.
+    
+Depending on your account, you may enable additional payment options. Review your merchant agreement or contact support for the most accurate list.
+
   </Tab>
 </Tabs>
 
-<Callout kind="tip" collapsed="false">
-  Recurring billing can help automate subscription or installment payments for services you provide.
+<Callout kind="tip">
+  
+Recurring billing can help automate subscription or installment payments for services you provide.
+
 </Callout>
 
-<Columns cols="2">
+<Columns cols={2}>
   <Card title="Security features" href="#security" icon="shield" horizontal="false">
-    Punchey includes strong security controls such as encryption and fraud monitoring to help safeguard sensitive payment information during processing.
+    
+Punchey includes strong security controls such as encryption and fraud monitoring to help safeguard sensitive payment information during processing.
+
   </Card>
 
   <Card title="Analytics dashboard" href="#analytics" icon="bar-chart" horizontal="false">
-    Review payment activity, monitor trends, and analyze customer behavior in real time.
+    
+Review payment activity, monitor trends, and analyze customer behavior in real time.
+
   </Card>
 </Columns>
 
-<Callout kind="info" collapsed="false">
-  Punchey uses industry-standard safeguards to help ensure secure handling of your customers' payment information.
-</Callout>
+<Callout kind="info">
+  
+Punchey uses industry-standard safeguards to help ensure secure handling of your customers' payment information.
 
+</Callout>
