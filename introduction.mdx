@@ -1,87 +1,104 @@
 ---
 title: Introduction
-description: Overview of Punchey and its core capabilities
+description: >-
+  High-level overview of Punchey for seamless payments, customer engagement,
+  reviews, and business management
 ---
+## Getting started
 
-## Getting Started
+Punchey helps small businesses manage payments, engage customers, and maintain stronger relationships through tools that support transactions, communication, and reviews. The platform brings together core business functions so you can streamline operations and focus on delivering great service.
 
-Punchey empowers small businesses with affordable payment processing and customer relationship management tools. Our platform helps you leverage transaction data to manage online reviews and build lasting customer relationships. By streamlining payments and reputation management, Punchey enables businesses to focus on growth and customer satisfaction.
-
-<Columns cols={3}>
-  <Card title="Payments" icon="credit-card" href="payment-solutions">
-    Streamline payment processing with secure, cost-effective solutions tailored for small businesses.
+<Columns cols="3">
+  <Card title="Payments" href="payment-solutions" icon="credit-card" horizontal="false">
+    Accept and manage payments through secure, seamless tools designed to support day-to-day business activity.
   </Card>
-  <Card title="CRM Tools" icon="users" href="crm-tools">
-    Manage customer relationships and leverage transaction data for targeted opportunities.
+
+  <Card title="CRM tools" href="crm-tools" icon="users" horizontal="false">
+    Maintain detailed customer profiles, track interactions, and use insights to improve engagement.
   </Card>
-  <Card title="Reviews" icon="star" href="reviews-management">
-    Enhance your online reputation through comprehensive review management features.
+
+  <Card title="Reviews" href="reviews-management" icon="star" horizontal="false">
+    Encourage positive feedback and manage your online reputation to attract more customers.
   </Card>
 </Columns>
 
 <Tabs>
-  <Tab title="Quick Setup" icon="zap">
-    Get started in minutes with our simple onboarding process. Connect your payment methods and import customer data seamlessly.
+  <Tab title="Overview" icon="info">
+    Punchey brings together payments, customer engagement, and review tools in one system to simplify business management.
   </Tab>
-  <Tab title="Key Benefits" icon="check-circle">
-    Reduce costs, improve customer retention, and boost your online presence with integrated CRM and payment tools.
+
+  <Tab title="Benefits" icon="check-circle">
+    Improve customer communication, streamline payments, and build your reputation using connected business tools.
   </Tab>
 </Tabs>
 
 <Steps>
-  <Step title="Sign Up" icon="user">
-    Create your Punchey account and verify your business details.
+  <Step title="Create your account" icon="user" title-type="p">
+    Start by creating a Punchey account and completing your business details so the platform can tailor tools to your needs.
   </Step>
-  <Step title="Connect Payments" icon="credit-card">
-    Integrate your preferred payment processors for seamless transactions.
+
+  <Step title="Set up payments" icon="credit-card" title-type="p">
+    Configure your payment options to begin accepting transactions through Punchey.
   </Step>
-  <Step title="Import Data" icon="database">
-    Upload customer information and transaction history to get insights immediately.
+
+  <Step title="Add your customer data" icon="database" title-type="p">
+    Import customer information to unlock features like communication tools, profiles, and engagement insights.
   </Step>
 </Steps>
 
-<Callout kind="info">Punchey offers competitive pricing with no hidden fees, making advanced CRM and payment tools accessible to businesses of all sizes.</Callout>
+<Callout kind="info" collapsed="false">
+  Punchey provides connected tools for payments, customer engagement, and reputation management to help small businesses operate more efficiently.
+</Callout>
 
-<Expandable title="Common Questions" default-open="false">
-  <Expandable title="Is Punchey suitable for my small business?" default-open="false">
-    Yes, Punchey is designed specifically for small businesses needing affordable payment and CRM solutions.
+<Expandable title="Common questions" default-open="false">
+  <Expandable title="What types of businesses use Punchey?" default-open="false">
+    Punchey supports a wide range of small businesses that need simple, unified tools for payments, customer communication, and reviews.
   </Expandable>
-  <Expandable title="How quickly can I set up?" default-open="false">
-    Most businesses complete setup within 30 minutes using our guided onboarding.
+
+  <Expandable title="Where can I find setup guidance?" default-open="false">
+    You can explore step-by-step setup help in the Support and Resources section below.
   </Expandable>
 </Expandable>
 
-<CodeGroup tabs="JavaScript,Python">
-  <Tab title="JavaScript" icon="code">
-    ````javascript
-    // Initialize Punchey SDK
-    const punchey = new PuncheySDK({
-      apiKey: 'your-api-key',
-      environment: 'production'
-    });
-    
-    // Process a payment
-    const payment = await punchey.payments.create({
-      amount: 1000,
-      currency: 'USD',
-      customerId: 'cust_123'
-    });
-    ````
-  </Tab>
-  <Tab title="Python" icon="code">
-    ````python
-    # Initialize Punchey SDK
-    punchey = PuncheySDK(
-        api_key='your-api-key',
-        environment='production'
-    )
-    
-    # Process a payment
-    payment = punchey.payments.create(
-        amount=1000,
-        currency='USD',
-        customer_id='cust_123'
-    )
-    ````
-  </Tab>
-</CodeGroup>
+## Support and resources
+
+The Punchey Resource Center at [support.punchey.com](https://support.punchey.com) provides guides, onboarding help, and troubleshooting resources across the platform.
+
+<Columns cols="3">
+  <Card title="Get started" href="https://support.punchey.com" icon="rocket" horizontal="false" target="_blank">
+    Learn what you need to set up your account and begin using Punchey effectively.
+  </Card>
+
+  <Card title="Devices and readers" href="https://support.punchey.com" icon="monitor" horizontal="false" target="_blank">
+    Access device setup and troubleshooting for registers, printers, and card readers.
+  </Card>
+
+  <Card title="Take payments and get paid" href="https://support.punchey.com" icon="credit-card" horizontal="false" target="_blank">
+    Find guides on deposits, products, services, and payment workflows.
+  </Card>
+</Columns>
+
+<Columns cols="3">
+  <Card title="Customers and forms" href="https://support.punchey.com" icon="users" horizontal="false" target="_blank">
+    Manage customer profiles and digital forms to streamline your intake process.
+  </Card>
+
+  <Card title="Reviews and client growth" href="https://support.punchey.com" icon="star" horizontal="false" target="_blank">
+    Learn how to attract new clients through reviews and reputation tools.
+  </Card>
+
+  <Card title="Reports" href="https://support.punchey.com" icon="bar-chart" horizontal="false" target="_blank">
+    Access reporting tools that help you understand performance and operations.
+  </Card>
+</Columns>
+
+<Columns cols="3">
+  <Card title="FAQs" href="https://support.punchey.com" icon="help-circle" horizontal="false" target="_blank">
+    Browse answers to common questions about using Punchey.
+  </Card>
+
+  <Card title="Updates" href="https://support.punchey.com" icon="history" horizontal="false" target="_blank">
+    Stay informed about new features and improvements.
+  </Card>
+</Columns>
+
